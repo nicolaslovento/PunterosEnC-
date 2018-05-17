@@ -12,10 +12,10 @@ int main()
     numeros[0]=9;
     numeros[1]=99;
     numeros[2]=999;//guardado consecutivo en la memoria
-    printf("\n puntero: %d",*puntero);
-    printf("\n puntero: %d",*puntero+1);
-    printf("\n puntero: %d",*puntero+2);
-    printf("\n puntero: %d",*puntero+3);
+    printf("\n puntero: %d",*(puntero-2));
+    printf("\n puntero: %d",*(puntero+1));
+    printf("\n puntero: %d",*(puntero+2));
+    printf("\n puntero: %d",*(puntero+3));
     printf("\n puntero: %d",numeros);
     //mostrar(numeros,3);
 

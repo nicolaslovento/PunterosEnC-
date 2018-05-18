@@ -9,21 +9,50 @@ typedef struct
 
 int main()
 {
-    dato d;
+    dato l[2]={{1,'a'},{1,'b'}};
+    dato* pLista;
+    pLista=l;//direccion de memoria del primer elemento
+    int i;
+    //OPERADOR FLECHA
+    printf("%d--%c\n",pLista->a,pLista->b);
+    printf("%d--%c\n",(pLista+i)->a,(pLista+i)->b);
+
+
+
+
+
+    //ejemplo1
+    /*int i;
+
+    for(i=0;i<2;i++)
+    {
+
+        printf("%d--%c\n",(*(pLista+i)).a,(*(pLista+i)).b);
+    }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*dato d;
     d.a=5;
     d.b='<';
 
     dato* pDato;
     pDato=&d;
-
-    //el * accede al valor. Las estructuras siempre son compuestas
-    printf("%d --%c",(*pDato).a,(*pDato).b);//Así accedo a los valores de la estructura
-    //printf("%d --%c",pDato.a,pDato.b);//ERROR
-    //printf("%d ",&d);//direccion de memoria
-
-    //printf("%d---%d",&d,&(d.a));//coincide ya que es donde empieza la estructura
-
-    //printf("TAM: %d\n",sizeof(dato));
-    //printf("%d--%c",d.a,d.b);
+    printf("%d --%c",(*pDato).a,(*pDato).b);*/
     return 0;
 }

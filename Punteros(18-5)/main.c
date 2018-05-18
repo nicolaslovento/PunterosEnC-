@@ -1,34 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void cargarArray(int*,int);
+int cargarArray(int*,int);
 void MostrarArray(int*,int);
 int main()
 {
     int vector[3];
-    int* puntero;
-    puntero=vector;
 
-    printf("%d\n",vector);
-    printf("%d\n",&vector);
-    printf("%d\n",&vector[0]);//son equivalentes
+    if(cargarArray(vector,3))//espera un valor booleano(si es 0 es falso)
+    {
+        printf("Carga exitosa");
+    }else
+    {
+        printf("Error al cargar datos");
+    }
 
-    cargarArray(vector,3);
-    MostrarArray(vector,3);
 
 
     return 0;
 }
-void cargarArray(int* puntero,int tam)
+int cargarArray(int* puntero,int tam)
 {
    int i;
-    //obtenemos valor
-    for(i=0;i<tam;i++)
+   int retorno=0;
+    //es 0 si es null el vector
+    if(puntero!=NULL)
     {
+        retorno=1;//es uno si esta cargardo
+        for(i=0;i<tam;i++)
+        {
         printf("Ingrese un numero: ");
         scanf("%d",puntero+i); // le suma 4 bites ya que es entero.
 
+        }
     }
+    return retorno;
 }
 
 void MostrarArray(int* puntero,int tam)
